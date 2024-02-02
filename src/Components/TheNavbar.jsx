@@ -22,8 +22,8 @@ const TheNavbar = () => {
   return (
     <>
       <section className="bg-gray-50 ">
-        <div className="container mx-auto p-5">
-          <nav className=" md:px-6 px-2 py-2 bg-gray-300 rounded drop-shadow-md">
+        <div className="container mx-auto md:p-5 ">
+          <nav className=" md:px-6 px-2 py-2 bg-gray-300 md:rounded drop-shadow-md p-1">
             <div className="flex justify-between items-center">
               <div>
                 <h3 className="font-Pacifico text-xl">Groot Blog</h3>
@@ -56,6 +56,21 @@ const TheNavbar = () => {
                   <FaBars size={20} />
                 )}
               </div>
+
+              {nav && (
+                <ul className="flex flex-col justify-center items-center absolute top-11 left-0 w-full h-screen bg-gray-600 text-gray-500 ">
+                  {navLinks.map(({ id, navbar }) => (
+                    <li
+                      key={id}
+                      className="px-4 cursor-pointer capitalize py-6 text-2xl "
+                    >
+                      <NavLink onClick={() => setNav(!nav)} to={navbar}>
+                        {navbar}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </nav>
         </div>

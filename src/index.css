@@ -11,6 +11,5 @@
 @tailwind utilities;
 
 .active{
-   /* Add whatever CSS style will make your link look active. The example below (in my case) */
-   @apply  text-white  rounded md:bg-transparent md:text-red-500 md:p-0 underline;
+   @apply  text-red-500  rounded  md:text-red-500 md:p-0 md:underline;
 }

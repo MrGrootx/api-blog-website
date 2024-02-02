@@ -20,6 +20,10 @@ const rou = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/home",
+        element: <Home />,
+      },
+      {
         path: "about",
         element: <About/>
       },

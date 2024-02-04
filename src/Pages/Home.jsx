@@ -1,3 +1,4 @@
+import Search from "../Components/Search";
 import img1 from "../assets/home/1.jpg";
 import img2 from "../assets/home/2.jpg";
 import img3 from "../assets/home/3.jpg";
@@ -97,6 +98,9 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          <Search/>
+
         </main>
       </section>
     </>

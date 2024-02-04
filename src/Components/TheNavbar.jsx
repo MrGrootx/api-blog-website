@@ -21,9 +21,9 @@ const TheNavbar = () => {
 
   return (
     <>
-      <section className="bg-gray-50 ">
+      <section className=" ">
         <div className="container mx-auto md:p-5 ">
-          <nav className=" md:px-6 px-2 py-2 bg-gray-300 md:rounded drop-shadow-md p-1">
+          <nav className=" md:px-6 px-2 md:py-5 py-2 bg-gray-300 md:rounded drop-shadow-md p-1">
             <div className="flex justify-between items-center">
               <div>
                 <h3 className="font-Pacifico text-xl">Groot Blog</h3>

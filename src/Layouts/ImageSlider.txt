@@ -1,0 +1,48 @@
+import { useState } from "react";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
+const ImageSlider = () => {
+  const slideImg = [
+    {
+      url: "https://images.unsplash.com/photo-1706773183831-223a782307ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1706783704217-d24930736585?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1706716109264-ac80916f55ea?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ];
+
+  const [img, setImg] = useState(0);
+
+  function handlebtn() {
+    const isFirstSlide = img === 0;
+    const newIndex = isFirstSlide ? slideImg.length - 1 : img - 1;
+    setImg(newIndex);
+  }
+  function handlebtn2() {
+    const isLastIndex = img === slideImg.length - 1;
+    const newIndex = isLastIndex ? 0 : img + 1;
+    setImg(newIndex);
+  }
+
+  return (
+    <div className="grid grid-cols-3 w-full border">
+      <div className="border w-[1400px] h-[400px]  py-16 px-4 relative group flex">
+        <div
+          style={{ backgroundImage: `url(${slideImg[img].url})` }}
+          className="w-full h-full rounded bg-center bg-cover duration-500"
+        >
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+            <FaArrowLeft size={30} onClick={handlebtn} />
+          </div>
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+            <FaArrowRight size={30} onClick={handlebtn2} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ImageSlider;

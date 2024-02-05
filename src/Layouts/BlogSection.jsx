@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import Social_media from "./Social_media";
 import TrendingArticles from "./TrendingArticles";
+import Footer from "../Components/Footer";
 
 const BlogSection = () => {
   return (
     <>
-      <section className=" container mx-auto md:p-5 md:px-6 px-2 mt-6">
+      <section className=" container mx-auto md:p-5 md:px-6 px-2 mt-6 border">
         <div className="border-b-2 border-black">
           <Link className="text-xl font-bold text-white bg-gray-950 inline-block px-3 py-1">
             LATEST ARTICLES
@@ -95,7 +96,7 @@ const BlogSection = () => {
             </div>
           </section>
           <section className="hidden md:block">
-            <div className=" max-h-96  max-w-96 mx-auto p-2">
+            <div className="max-w-96 mx-auto p-2">
               <div className=" border-b border-black">
                 <span className="bg-gray-900 text-white px-2 py-1">
                   STAY CONNECTED
@@ -104,9 +105,11 @@ const BlogSection = () => {
               <Social_media />
               <TrendingArticles />
             </div>
+              
           </section>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };

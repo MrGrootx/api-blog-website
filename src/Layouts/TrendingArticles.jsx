@@ -10,7 +10,7 @@ const TrendingArticles = () => {
           </Link>
         </div>
 
-        <div className="p-2 h-[400px] overflow-auto mt-2">
+        <div className="p-2 h-[400px] overflow-auto mt-2 ">
           <div className=" border-b py-2">
             <span className="text-blue-800 text-xs">HEALTH</span>
             <p>

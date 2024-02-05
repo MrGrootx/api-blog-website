@@ -1,4 +1,5 @@
 import Search from "../Components/Search";
+import BlogSection from "../Layouts/BlogSection";
 import img1 from "../assets/home/1.jpg";
 import img2 from "../assets/home/2.jpg";
 import img3 from "../assets/home/3.jpg";
@@ -8,7 +9,7 @@ const Home = () => {
   return (
     <>
       <section>
-        <main className="container mx-auto md:p-5   md:px-6">
+        <main className="container mx-auto md:p-5 md:px-6">
           <div className="bg-whiteh-full py-6 sm:py-8 lg:py-12">
             <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5 xl:gap-4">
@@ -100,7 +101,7 @@ const Home = () => {
           </div>
 
           <Search/>
-
+          <BlogSection/>
         </main>
       </section>
     </>

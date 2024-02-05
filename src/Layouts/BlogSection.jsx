@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import blogImg from "../assets/blog/1.jpg";
+import Social_media from "./Social_media";
+import TrendingArticles from "./TrendingArticles";
 
 const BlogSection = () => {
   return (
@@ -7,7 +9,7 @@ const BlogSection = () => {
       <section className="border container mx-auto md:p-5 md:px-6 mt-6">
         <div className="border-b-2 border-black">
           <Link className="text-xl font-bold text-white bg-gray-950 inline-block px-3 py-1">
-          LATEST ARTICLES
+            LATEST ARTICLES
           </Link>
         </div>
 
@@ -15,7 +17,6 @@ const BlogSection = () => {
           <section className="">
             <div className="p-2">
               <div className="grid grid-cols-2  gap-3">
-
                 <div className="border  bg-gray-100 rounded">
                   <img
                     src={blogImg}
@@ -41,7 +42,6 @@ const BlogSection = () => {
                       <div className="mt-4 text-[#C70039]">
                         <span className="font-semibold">
                           By Armin Vans - August 7, 2019
-
                         </span>
                       </div>
                     </div>
@@ -73,7 +73,6 @@ const BlogSection = () => {
                       <div className="mt-4 text-[#C70039]">
                         <span className="font-semibold">
                           By Armin Vans - August 7, 2019
-
                         </span>
                       </div>
                     </div>
@@ -105,19 +104,25 @@ const BlogSection = () => {
                       <div className="mt-4 text-[#C70039]">
                         <span className="font-semibold">
                           By Armin Vans - August 7, 2019
-
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                
-
               </div>
             </div>
           </section>
-          <section className="border border-black max-h-96">2</section>
+          <section className="">
+            <div className=" max-h-96  max-w-96 mx-auto p-2">
+              <div className=" border-b border-black">
+                <span className="bg-gray-900 text-white px-2 py-1">
+                  STAY CONNECTED
+                </span>
+              </div>
+              <Social_media />
+            <TrendingArticles/>
+            </div>
+          </section>
         </div>
       </section>
     </>
